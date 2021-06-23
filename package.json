@@ -1,0 +1,16 @@
+{
+  "name": "static-server",
+  "version": "1.0.0",
+  "description": "静态资源管理器",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "nodemon": "^2.0.7"
+  }
+}
