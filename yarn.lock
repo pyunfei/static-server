@@ -849,6 +849,11 @@ pupa@^2.0.1:
   dependencies:
     escape-goat "^2.0.0"
 
+qrcode-terminal@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.npm.taobao.org/qrcode-terminal/download/qrcode-terminal-0.12.0.tgz#bb5b699ef7f9f0505092a3748be4464fe71b5819"
+  integrity sha1-u1tpnvf58FBQkqN0i+RGT+cbWBk=
+
 rc@^1.2.8:
   version "1.2.8"
   resolved "https://repo.huaweicloud.com/repository/npm/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"

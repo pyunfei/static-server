@@ -5,6 +5,8 @@ const path = require('path')
 const content = require('./util/content')
 const mimes = require('./util/mimes')
 
+const qrcode = require('qrcode-terminal');
+
 const app = new Koa()
 const router = new Router()
 
@@ -21,8 +23,10 @@ function parseMime(url) {
 app.use(htmlRender())
 app.use(router.routes()).use(router.allowedMethods())
 
-router.get("/",async ctx=>{
+router.get("/", async (ctx, next) => {
+  console.log('%c [ ctx ]-27', 'font-size:13px; background:pink; color:#bf2c9f;', ctx.host)
   await ctx.html('index.html')
+  next()
 })
 
 app.use(async (ctx) => {
@@ -48,6 +52,12 @@ app.use(async (ctx) => {
   }
 })
 
+router.get("/", async (ctx) => {
+  const ip = ctx.request.ips
+  qrcode.setErrorLevel(ip);
+  qrcode.generate(ip, { small: true });
+})
+
 
 app.listen(3434)
-console.log(`static-server 🚀 http://localhost:3434 is starting at port 3434`)
+console.log(`static-server 🚀 http://127.0.0.1:3434 is starting at port 3434`)
