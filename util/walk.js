@@ -1,5 +1,5 @@
 const fs = require('fs')
-const mimes = require('./mimes')
+const mimes = require('./mimes.js')
 
 /**
  * 遍历读取目录内容（子目录，文件名）

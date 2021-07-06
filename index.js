@@ -3,7 +3,7 @@ const Router = require("koa-router")
 const htmlRender = require("koa-html-render")
 const path = require('path')
 const content = require('./util/content')
-const mimes = require('./util/mimes')
+const mimes = require('./util/mimes.js')
 
 const qrcode = require('qrcode-terminal');
 
